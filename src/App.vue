@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref, watch } from 'vue'
 import MyComponent from './components/MyComponent.vue'
 
-const fullName = ref("")
+const fullName = ref('')
 
 watch(
   () => fullName.value,
   (newVal: string) => {
     console.log(newVal)
-  }
+  },
 )
 
 const onSave = (fullName: string) => {
@@ -17,5 +17,8 @@ const onSave = (fullName: string) => {
 </script>
 
 <template>
-  <MyComponent v-model="fullName" @save="onSave" />
+  <MyComponent
+    v-model="fullName"
+    @save="onSave"
+  />
 </template>
