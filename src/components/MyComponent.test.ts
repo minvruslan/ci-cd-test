@@ -28,7 +28,7 @@ describe('<MyComponent />', () => {
 
     const saveEvents = emitted().save ?? []
 
-    expect(saveEvents).toBeTruthy()
+    expect(saveEvents).not.toBeTruthy()
     expect(saveEvents[0]).toEqual(['John Doe'])
   })
 })
